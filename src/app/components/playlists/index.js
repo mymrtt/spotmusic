@@ -4,12 +4,7 @@ import Image from "next/image";
 import useSWR from "swr";
 import { fetcher } from "../../utils/fetcher";
 
-const Playlists = () => {
-	const { data, error, isLoading, isValidating } = useSWR(
-		() => "/api/playlist",
-		fetcher
-	);
-
+const Playlists = ({ data, isValidating, isLoading, error }) => {
 	if (isValidating || isLoading || error) return <></>;
 
 	return (
