@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 
-const Recommended = ({ data, title, isValidating, isLoading, error }) => {
-	if (isValidating || isLoading || error) return <></>;
+const Recommended = ({ data, title }) => {
+	// TODO: add suspense in case of isloading/validating
 
 	return (
 		<section className="flex flex-col">
