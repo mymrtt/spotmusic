@@ -1,8 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import useSWR from "swr";
-import { fetcher } from "../../utils/fetcher";
 
 const Playlists = ({ data, isValidating, isLoading, error }) => {
 	if (isValidating || isLoading || error) return <></>;
